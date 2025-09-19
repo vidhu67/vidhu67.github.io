@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Vidhu's Space Page</title>
+  <!-- Handwritten font -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Caveat', cursive;
+      color: #fff;
+      background: radial-gradient(circle at 20% 20%, #1a1a2e, #0f3460);
+      background-image: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/star-2695569_1280.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 3rem;
+      position: relative;
+      animation: bounce 3s infinite;
+    }
+    header::after {
+      content: "✨🌌";
+      margin-left: 10px;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 1rem 2rem;
+      background: rgba(0,0,0,0.5);
+      border-radius: 15px;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      border-bottom: 2px solid #fff;
+      padding-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 1rem 0;
+      display: block;
+    }
+    iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+      border-radius: 10px;
+    }
+    .easter-egg {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      width: 30px;
+      height: 30px;
+      opacity: 0.2;
+      cursor: pointer;
+    }
+    .joke {
+      display: none;
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      color: #ffd700;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Vidhu
+    <div class="easter-egg" title="???"></div>
+  </header>
+
+  <section>
+    <h2>My Future</h2>
+    <p>After high school, I want to study <strong>sports analytics</strong>—combining my love for data and sports to make smart decisions and predictions.</p>
+  </section>
+
+  <section>
+    <h2>Unit 1: Data</h2>
+    <ul>
+      <li><strong>Bit:</strong> A binary digit, either 0 or 1.</li>
+      <li><strong>Byte:</strong> A sequence of 8 bits.</li>
+      <li><strong>Roundoff:</strong> Error caused by limited precision.</li>
+      <li><strong>Analog Data:</strong> Values that change smoothly over time.</li>
+      <li><strong>Lossless:</strong> Compression that preserves all data.</li>
+      <li><strong>Lossy:</strong> Compression that discards some data.</li>
+      <li><strong>Metadata:</strong> Data about data.</li>
+    </ul>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Binary_example.svg/640px-Binary_example.svg.png" alt="Binary data example">
+  </section>
+
+  <section>
+    <h2>Unit 2: Computer Systems and Networks</h2>
+    <ul>
+      <li><strong>Computing Device:</strong> A physical device that can run a program.</li>
+      <li><strong>Computer Network:</strong> Interconnected devices sending/receiving data.</li>
+      <li><strong>Path:</strong> Series of connections between sender and receiver.</li>
+      <li><strong>Protocol:</strong> Rules for system communication.</li>
+      <li><strong>Fault Tolerant:</strong> System works even if parts fail.</li>
+      <li><strong>Scalability:</strong> System’s ability to expand or contract.</li>
+      <li><strong>Bandwidth:</strong> Max transmission capacity.</li>
+      <li><strong>URL:</strong> Easy-to-remember web address.</li>
+      <li><strong>IP, TCP, UDP, Packets, Routers, DNS, HTTP, WWW:</strong> Core internet concepts.</li>
+    </ul>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Internet_map_1024.jpg/640px-Internet_map_1024.jpg" alt="Internet map visualization">
+  </section>
+
+  <section>
+    <h2>How the Internet Works</h2>
+    <iframe src="https://www.youtube.com/embed/Dxcc6ycZ73M" title="How the Internet Works"></iframe>
+  </section>
+
+  <div class="joke">🚀 Why did the computer go to space? To find more bytes among the stars! 🌠</div>
+
+  <script>
+    const egg = document.querySelector('.easter-egg');
+    const joke = document.querySelector('.joke');
+    egg.addEventListener('click', () => {
+      joke.style.display = joke.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
+
+</body>
+</html>
